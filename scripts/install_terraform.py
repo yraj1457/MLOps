@@ -5,7 +5,7 @@ from pathlib import Path
 
 # Terraform
 terraform_image = "hashicorp/terraform:latest"
-terrform_dir = "../terraform"
+terraform_dir = "../terraform"
 
 # Checks if Docker is installed
 def is_docker_or_no():
@@ -29,7 +29,7 @@ def run_terraform():
         print(f"Running Terraform {cmd}")
         try:
             subprocess.run(
-                f"docker run --rm -v {Path(terrform_dir).resolve()}:/workspace "
+                f"docker run --rm -v {Path(terraform_dir).resolve()}:/workspace "
                 f"-w /workspace {terraform_image} {cmd}",
                 shell=True,
                 check=True
