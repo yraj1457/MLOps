@@ -3,9 +3,13 @@
 This project demonstrates how to automate:
 
 a. Model training
+
 b. Building image out of the trained model
+
 c. Pushing the image to DockerHub
+
 d. Running Terraform in Docker
+
 e. Running Terraform commands (init, plan, apply) to provision infrastructure
 
 
@@ -34,7 +38,7 @@ terraform/: Infrastructure configuration using Terraform (runs in Docker)
     variables.tf: Defines required input variables like region and image name
 
     outputs.tf: Prints out deployment outputs 
-    
+
     terraform.tfvars: Gets dynamically updated with the latest Docker image during automation
 
 
